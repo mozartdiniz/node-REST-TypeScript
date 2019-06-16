@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npx tsc",
+    "start": "npx pm2 start pm2.yaml",
     "test": "jest --coverage --verbose",
     "dev": "tsc-watch --onSuccess \"node ./dist/server.js\""
   },
