@@ -4,4 +4,14 @@ import {
     handleCompression
 } from './common';
 
-export default [handleCors, handleBodyRequestParsing, handleCompression];
+import {
+    handleAPIDocs
+} from './apiDocs';
+
+export default [
+    handleCors,
+    handleBodyRequestParsing,
+    handleCompression,
+    handleAPIDocs
+];
+
