@@ -10,7 +10,6 @@ const handle404Error = (router: Router) => {
 const handleClientErrors = (router: Router) => {
     router.use((err: Error, req: Request, res: Response, next: NextFunction) => {
         if (err instanceof HTTPClientError) {
-            console.error(err);
             res.status(err.statusCode).send(err.message);
         } else {
             next(err);
